@@ -287,3 +287,6 @@ target_include_directories(test-alloc PRIVATE ${PROJECT_SOURCE_DIR}/ggml/src)
 
 llama_build(export-graph-ops.cpp)
 target_include_directories(export-graph-ops PRIVATE ${PROJECT_SOURCE_DIR}/ggml/src)
+
+add_executable(tensor 0.tensor.cpp)
+target_link_libraries(tensor PRIVATE llama)
